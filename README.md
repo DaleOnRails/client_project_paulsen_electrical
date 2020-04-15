@@ -9,8 +9,12 @@ Github Repository Link: [Here](https://github.com/DaleOnRails/client_project_pau
 
 Live Site URL: 
 
+## Tech Stack
+
+
 ## Build Status
 
-## Snapshots
 
 ## Delivery Time
+
+## Snapshots
