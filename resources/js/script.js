@@ -2,26 +2,27 @@ $(document).ready(function() {
     
     
     /* For the sticky navigation */
-    $('.js--section-features').waypoint(function(direction) {
-        if (direction == "down") {
-            $('nav').addClass('sticky');
+    $('.js--section-features').waypoint(function (direction) {
+        if (direction == "down" && ! ($('nav').hasClass('sticky'))) {
+            $('nav').addClass('sticky').animate({ "top": "0%" }, 500);
         } else {
-            $('nav').removeClass('sticky');
+            $('nav').removeClass('sticky').css({ "top": "-100%" });
         }
     }, {
-      offset: '60px;'
     });
     
+
     
     /* Scroll on buttons */
     $('.js--scroll-to-plans').click(function () {
-       $('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000); 
+        $('html, body').animate({ scrollTop: $('.js--section-plans').offset().top }, 1000);
     });
-    
+
     $('.js--scroll-to-start').click(function () {
-       $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000); 
+        $('html, body').animate({ scrollTop: $('.js--section-features').offset().top }, 1000);
     });
     
+
     
     /* Navigation scroll */
     $(function() {
@@ -40,6 +41,7 @@ $(document).ready(function() {
     });
     
     
+
     /* Animations on scroll */
     $('.js--wp-1').waypoint(function(direction) {
         $('.js--wp-1').addClass('animated fadeIn');
@@ -66,6 +68,8 @@ $(document).ready(function() {
     });
     
     
+
+
     /* Mobile navigation */
     $('.js--nav-icon').click(function() {
         var nav = $('.js--main-nav');
